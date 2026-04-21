@@ -1,0 +1,796 @@
+/* Descripción: Evita el movimiento lateral molesto */
+html,
+body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    /* Descripción: Esta es la clave. Oculta cualquier cosa que intente salirse por los lados */
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* HEADER (Manteniendo tu estructura) */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #fff;
+    /* Fondo blanco para el header */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    color: #000;
+    margin-left: 20px;
+}
+
+.btn-contactar {
+    background-color: #D5639F;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-family: inherit;
+    /* Asegura que el botón use Inter */
+}
+
+/* Sección 1 */
+/* Sección 1 */
+
+.hero-section {
+    background-color: var(--bg-color);
+    padding: 100px 0;
+    position: relative;
+    overflow: hidden;
+    /* Para que las líneas decorativas no salgan */
+}
+
+/* Elementos decorativos (líneas curvas) */
+.decorative-line {
+    position: absolute;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.line-1 {
+    width: 200px;
+    height: 200px;
+    left: -50px;
+    top: 50px;
+    border-color: #eee;
+}
+
+.line-2 {
+    width: 400px;
+    height: 300px;
+    right: -100px;
+    bottom: -50px;
+    border-color: #eee;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    position: relative;
+    /* Para estar por encima de las líneas */
+    z-index: 1;
+}
+
+.hero-image {
+    flex: 1;
+}
+
+.main-project-img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.hero-text {
+    flex: 1.2;
+}
+
+/* Título h1 con estilo solicitado */
+.hero-text h1 {
+    font-family: var(--inter-font);
+    font-weight: 700;
+    /* bold */
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+    position: relative;
+    padding-left: 15px;
+}
+
+/* Línea vertical azul a la izquierda del título */
+.hero-text h1::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 3px;
+    background-color: var(--primary-color);
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.7;
+}
+
+/* 1. EL FONDO (Asegúrate de que la sección tenga este color) */
+.hero-section {
+    background-color: #A6BEE6 !important;
+    /* El color azul-púrpura */
+    padding: 120px 0 80px 0;
+    /* Aumenté el primer número para que no esté pegado al header */
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+/* 2. LA LÍNEA AZUL JUNTO AL H1 */
+.hero-text h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    color: #000;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    /* Espacio para la línea */
+    position: relative;
+    line-height: 1.2;
+}
+
+/* Este es el código que dibuja la barrita azul */
+.hero-text h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 6px;
+    /* Grosor de la línea */
+    background-color: #0047AB;
+    /* El azul de la línea */
+    border-radius: 2px;
+}
+
+/* 3. AJUSTE DEL HEADER (Para que no tape el contenido) */
+.main-header {
+    background-color: #fff;
+    padding: 20px 50px;
+    position: sticky;
+    /* O fixed */
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+/* 4. MARGEN PARA EL CONTENEDOR */
+.hero-content {
+    display: flex;
+    align-items: flex-start;
+    /* Alinea el texto arriba con la imagen */
+    gap: 50px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+/* 4. Galeria */
+/* Contenedor de la segunda sección con el azul solicitado */
+
+/* SECCIÓN GRIS */
+.secondary-section {
+    background-color: #F2F2F2;
+    /* Un gris claro suave, puedes usar #E0E0E0 si lo quieres más oscuro */
+    padding: 80px 0;
+    width: 100%;
+    display: block;
+}
+
+/* Ajuste para que las imágenes de la galería resalten */
+.top-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.gallery-img {
+    width: 23%;
+    height: 250px;
+    /* Ajusta el alto a tu gusto */
+    object-fit: cover;
+    background-color: #fff;
+    /* Fondo blanco interno por si la imagen tiene transparencias */
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    /* Sombra suave para que se vea más profesional */
+}
+
+/* Galería superior de 4 imágenes */
+.top-gallery {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.gallery-img {
+    width: 23%;
+    /* Para que quepan 4 con el gap */
+    height: 180px;
+    object-fit: cover;
+    background-color: #fff;
+    border-radius: 2px;
+}
+
+/* Estilo del cursor para indicar que se puede hacer clic */
+.gallery-img {
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery-img:hover {
+    opacity: 0.8;
+}
+
+/* El fondo del Modal (oscuro) */
+.modal {
+    display: none;
+    /* Escondido por defecto */
+    position: fixed;
+    z-index: 2000;
+    padding-top: 50px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* La imagen dentro del modal */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: auto;
+    max-width: 90%;
+    max-height: 85vh;
+    border-radius: 5px;
+}
+
+/* Botón de cerrar */
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Bloque de texto con la línea blanca */
+.description-block {
+    max-width: 800px;
+    margin-bottom: 80px;
+    padding-left: 20px;
+}
+
+.white-line-title {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #000;
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* La línea blanca al lado del H1 */
+.white-line-title::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 5px;
+    background-color: #ffffff;
+    /* LÍNEA BLANCA */
+    border-radius: 2px;
+}
+
+.description-text {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+    margin-left: 20px;
+}
+
+/* GALERÍA NEGRA DE ANCHO COMPLETO */
+.full-width-black-gallery {
+    background-color: #000000;
+    /* Fondo negro */
+    width: 100vw;
+    /* 100% del ancho de la pantalla */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 40px 0;
+    overflow-x: auto;
+    /* Por si las fotos son muchas, permite scroll */
+}
+
+.black-gallery-inner {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.black-gallery-inner img {
+    height: 250px;
+    /* Ajusta el alto según tus fotos */
+    width: auto;
+    filter: grayscale(20%);
+    /* Opcional, para ese look artístico */
+    transition: transform 0.3s;
+}
+
+.black-gallery-inner img:hover {
+    transform: scale(1.05);
+}
+
+/* sección 4*/
+/* Sección general con fondo gris claro */
+.seccion-editorial {
+    padding: 80px 10%;
+    /* Espacio superior para que no pegue al header */
+    background-color: #E0E0E0;
+    /* Fondo gris claro de tu captura */
+    min-height: 100vh;
+}
+
+.texto-editorial h1 {
+    font-family: 'Alegreya', serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 30px;
+    color: #000;
+
+    /* --- AQUÍ ESTÁ LA LÍNEA BLANCA --- */
+    border-left: 5px solid #FFFFFF;
+    /* Grosor y color de la línea */
+    padding-left: 20px;
+    /* Espacio entre la línea y el texto */
+}
+
+.texto-editorial p {
+    font-family: 'Alegreya', serif;
+    /* Manteniendo la coherencia tipográfica */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    padding-left: 25px;
+    /* Para que el texto se alinee con el inicio del H1 */
+}
+
+.contenido-grid {
+    display: flex;
+    gap: 50px;
+    /* Espacio entre el texto y la revista */
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.texto-editorial {
+    flex: 1;
+    /* Toma el espacio de la izquierda */
+}
+
+.texto-editorial h1 {
+    font-family: 'Alegreya', serif;
+    /* <-- Punto y coma al final */
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+
+.titulo-con-linea {
+    font-family: 'Alegreya', serif;
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 25px;
+    color: #000;
+
+    /* La línea blanca al lado del H1 */
+    border-left: 4px solid #FFFFFF;
+    padding-left: 20px;
+    /* Espacio entre la línea y el texto */
+    display: inline-block;
+    /* Para que la línea solo ocupe el alto del texto */
+}
+
+/* Ajuste adicional por si el fondo es muy claro y no se nota la línea */
+.seccion-editorial {
+    padding: 80px 10%;
+    background-color: #E0E0E0;
+    /* El gris de tu captura ayuda a que resalte el blanco */
+}
+
+.img-decorativa {
+    width: 100%;
+    margin-top: 30px;
+    border: 1px solid #ddd;
+}
+
+.portada-container {
+    flex: 1;
+    /* Toma el espacio de la derecha */
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* El rectángulo de la revista con tus medidas de Figma */
+.pdf-viewer-container {
+    width: 100%;
+    max-width: 500px;
+    height: 700px;
+    background-color: #6D7D8E;
+    /* Tu color azul grisáceo */
+    border: none;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+/* Ultima sección*/
+/* Descripción: Fondo expandido de extremo a extremo sin mover lo de arriba */
+.dunas-full-width {
+    background-color: #E6B392;
+    width: 100vw;
+    /* Ocupa todo el ancho de la ventana */
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    /* Truco para centrar un elemento de 100vw */
+    margin-right: -50vw;
+    padding: 80px 0;
+    /* Espacio arriba y abajo para que no se corte */
+    display: block;
+    box-sizing: border-box;
+    /* Esto evita que los márgenes de los hijos "empujen" hacia afuera */
+}
+
+.texto-editorial h1 {
+    font-family: 'Alegreya', serif;
+    /* <-- Fuente especificada y línea cerrada con ; */
+    font-size: 2.5rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+
+.white-line-round {
+    position: relative;
+    padding-left: 25px;
+    /* Espacio para que la línea no choque con las letras */
+    font-family: 'Inter', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    color: #000;
+    border-radius: 0;
+}
+
+/* Descripción: La línea blanca ahora tiene las esquinas en punta */
+.white-line-round::before {
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 6px;
+    /* Grosor de la línea */
+    background-color: #ffffff;
+    /* Color blanco */
+    /* Descripción: Eliminamos el border-radius para que termine en punta recta */
+    border-radius: 0;
+}
+
+/* Descripción: Contenedor que centra el contenido pero no el fondo */
+.dunas-container-centered {
+    max-width: 1100px;
+    /* El ancho normal de tu página */
+    margin: 0 auto;
+    /* Centra el contenido */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+}
+
+/* Descripción: Ajustamos el flex para que el texto tenga más espacio y la imagen menos */
+.dunas-text-box {
+    flex: 2;
+    padding-right: 50px;
+    /* CAMBIO: Quitamos márgenes extraños por si acaso */
+    margin: 0;
+}
+
+.dunas-single-image {
+    flex: 0.8;
+    /* Descripción: Al bajar de 1, la columna de la imagen se vuelve más estrecha */
+    display: flex;
+    justify-content: center;
+}
+
+/* Descripción: Reducimos el ancho máximo de la foto fija */
+.dunas-single-image img {
+    max-width: 320px;
+    /* Descripción: Antes era 450px, ahora es más pequeña y delicada */
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* Descripción: Texto en verde como pediste */
+.desc-green {
+    color: #040c03;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 15px;
+    /* CAMBIO: Quitamos el margen de abajo para que el centrado sea perfecto */
+    margin-bottom: 0;
+}
+
+/* Descripción: Título con línea blanca REDONDEADA */
+.white-line-round::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5px;
+    bottom: 5px;
+    width: 6px;
+    /* Grosor de la línea */
+    background-color: #ffffff;
+    /* Color blanco */
+    border-radius: 10px;
+    /* Descripción: Puntas redondeadas */
+}
+
+.desc-green {
+    color: #040c03;
+    /* Descripción: Color verde para el párrafo */
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+/* IMAGEN ACHICADA */
+.dunas-single-image img {
+    max-width: 280px;
+    /* Descripción: Tamaño pequeño para la imagen fija */
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+/* SECCIÓN BLANCA: Galería gigante */
+.white-footer-gallery {
+    background-color: #ffffff;
+    width: 100vw;
+    /* También infinito hacia los lados */
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    padding: 60px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-inner {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.zoom-img {
+    height: 400px;
+    width: auto;
+}
+
+/* 2. RE-AJUSTE PARA ACHICAR AÚN MÁS LA IMAGEN DE ARRIBA (OPCIONAL) */
+.dunas-single-image img {
+    max-width: 280px;
+    /* Descripción: La imagen de arriba queda pequeña y minimalista */
+    width: 100%;
+    height: auto;
+
+    /* Descripción: Un toque sutil para que el texto resalte más */
+}
+
+/* collague */
+/* --- SECCIÓN COLLAGE DE ILUSTRACIONES --- */
+
+/* Fondo blanco para toda la sección */
+.collage-section {
+    background-color: #ffffff;
+    width: 100%;
+    padding: 60px 0;
+}
+
+/* Contenedor principal que centra y alinea */
+.collage-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Esto centra los 2 de abajo */
+    gap: 30px;
+}
+
+
+/* Descripción: Forzamos que la sección del collage termine antes del footer */
+.collage-section {
+    background-color: #E0E0E0;
+    /* Color gris de fondo */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    padding: 80px 0;
+    box-sizing: border-box;
+}
+
+/* CONTENEDOR: Mantiene las 4 imágenes centradas y alineadas */
+.collage-container {
+    max-width: 1000px;
+    /* Contenedor para que las fotos no se desparramen */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* Centra los items */
+    gap: 40px;
+    /* Espacio entre ilustraciones */
+}
+
+/* ESTILO DE CADA ITEM */
+.collage-item {
+    /* calc(33.33% - gap) obliga a que solo quepan 3 por fila */
+    flex: 0 1 calc(33.33% - 40px);
+    min-width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.image-wrapper {
+    width: 100%;
+    height: 250px;
+    /* Descripción: Altura fija para que todas las fotos empiecen igual */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.image-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    /* Descripción: Evita que las ilustraciones se deformen */
+}
+
+/* TEXTO DEL NOMBRE */
+.species-name {
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: 0.9rem;
+    color: #333333;
+    margin-top: 10px;
+}
+
+/* Footer  */
+/* --- FOOTER FINAL Y ORDENADO --- */
+.main-footer {
+    background-color: #353535 !important;
+    color: white;
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    margin-left: -50vw;
+    padding: 60px 0 40px 0;
+    display: block;
+    clear: both;
+    /* Evita que flote */
+}
+
+/* Descripción: Caja que centra todo el contenido */
+.footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Descripción: Alinea logo a la izquierda y redes a la derecha */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    /* Descripción: Esto los separa a los extremos */
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #D5639F;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D5639F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #D5639F;
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* Descripción: Alinea copyright a la izquierda y legal a la derecha */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.footer-legal a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.container,
+.footer-inner,
+.dunas-container-centered {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}

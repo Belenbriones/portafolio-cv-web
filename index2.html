@@ -1,0 +1,257 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Belén Briones</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style2.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+     <header>
+    <div class="logo">
+        <span class="icon"></span> 
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <strong>BELÉN BRIONES</strong>
+        </a>
+    </div>
+       <nav class="nav-menu">
+        <a href="index.html#proyectos">Proyectos</a>
+        
+        <a href="index.html#sobre-mi">Sobre Mí</a>
+        
+        <a href="https://wa.me/56957190304?text=Hola%20Belén,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte"
+            target="_blank">
+            <button class="btn-contactar">Contactar</button>
+        </a>
+    </nav>
+</header>
+    <main>
+        <section class="project-hero">
+            <div class="blur-effect"></div>
+            <div class="container hero-content">
+                <div class="text-block">
+                    <h1>Trámites de la<br>Municipalidad de Valparaíso</h1>
+                    <p>El objetivo del proyecto es diseñar un portal de trámites municipales que informe, guíe y permita
+                        realizar distintos procedimientos, en una interfaz amigable y accesible para usuarios de páginas
+                        web y aplicaciones para celulares.</p>
+                </div>
+                <div class="image-block">
+                    <img src="Tramites/Mockup-P.Tramites de la municiplaidad.png" alt="Mockup Trámites">
+                </div>
+            </div>
+        </section>
+
+        <section class="interface-section">
+            <div class="container">
+                <div class="text-block-full">
+                    <h1>Interfaz</h1>
+                    <p>Este proyecto consistió en el diseño de un portal accesible para la Dirección de Obras
+                        Municipales, enfocado en digitalizar y simplificar trámites complejos mediante una interfaz
+                        amigable y dispositivos móviles. La solución integra servicios estatales como Clave Única y
+                        FirmaGob, asegurando el cumplimiento con la Ley de Transformación Digital y optimizando los
+                        estándares de interoperabilidad.</p>
+                </div>
+                <div class="gallery-wrapper">
+                    <button class="nav-btn prev"><i class="fas fa-chevron-left"></i></button>
+
+                    <div class="gallery-track-container">
+                        <div class="gallery-track">
+                            <img src="Tramites/agencia eunoia- tramites de obra.png" class="zoomable" alt="Interfaz 2">
+                            <img src="tramites/tramites de obra-menor (2).png" class="zoomable" alt="Interfaz 2">
+                            <img src="Tramites/Tramites de obra-Menor (3).png" class="zoomable" alt="Interfaz 3">
+                            <img src="Tramites/tramites de obra-menor (4).png" class="zoomable" alt="Interfaz 4">
+                            <img src="Tramites/Tramites de obra-menor (5).png" class="zoomable" alt="Interfaz 5">
+                            <img src="Tramites/tramites de obra-menor (6).png" class="zoomable" alt="Interfaz 6">
+                            <img src="Tramites/tramites de obra-menor (7).png" class="zoomable" alt="Interfaz 7">
+                            <img src="Tramites/tramites de obra-menor(8).png" class="zoomable" alt="Interfaz 8">
+                        </div>
+                    </div>
+                    <button class="nav-btn next"><i class="fas fa-chevron-right"></i></button>
+                </div>
+                <div id="lightbox" class="lightbox">
+                    <span class="close-lightbox">&times;</span>
+                    <img class="lightbox-content" id="lightbox-img">
+                </div>
+            </div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // 1. Lógica de las flechas (Navegación horizontal)
+            const track = document.querySelector('.gallery-track');
+            const prevBtn = document.querySelector('.nav-btn.prev');
+            const nextBtn = document.querySelector('.nav-btn.next');
+
+            if (nextBtn && prevBtn && track) {
+                nextBtn.addEventListener('click', function () {
+                    track.scrollBy({ left: 350, behavior: 'smooth' });
+                });
+
+                prevBtn.addEventListener('click', function () {
+                    track.scrollBy({ left: -350, behavior: 'smooth' });
+                });
+            }
+
+            // 2. Lógica del Zoom (Lightbox)
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const closeBtn = document.querySelector('.close-lightbox');
+            const images = document.querySelectorAll('.zoomable');
+
+            images.forEach(image => {
+                image.onclick = function () {
+                    lightbox.style.display = 'flex';
+                    lightboxImg.src = this.src;
+                    // Evitar que el scroll del cuerpo se mueva mientras está abierto
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+
+            // Función para cerrar
+            function cerrarLightbox() {
+                lightbox.style.display = 'none';
+                document.body.style.overflow = 'auto';
+            }
+
+            if (closeBtn) {
+                closeBtn.onclick = cerrarLightbox;
+            }
+
+            // Cerrar si hacen clic fuera de la imagen
+            if (lightbox) {
+                lightbox.onclick = function (e) {
+                    if (e.target !== lightboxImg) {
+                        cerrarLightbox();
+                    }
+                };
+            }
+        });
+    </script>
+    <section class="lenguaje-visual">
+        <div class="container">
+            <div class="header-visual">
+                <h1>Lenguaje Visual</h1>
+                <p class="quote">"La precisión técnica se encuentra con la accesibilidad universal."</p>
+            </div>
+
+            <div class="grid-visual">
+                <div class="card-blanca atomic-block">
+                    <img src="Tramites/diseño atomico-tramites de obras.png" alt="Diseño Atómico">
+                </div>
+
+                <div class="card-blanca buttons-block">
+                    <img src="Tramites/iconosyBotones.png" alt="Sistemas de Botones">
+                </div>
+
+                <div class="card-blanca paleta-block">
+                    <h3>PALETA CROMÁTICA</h3>
+                    <div class="color-row">
+                        <div class="color-circle" style="background-color: #2176D1;"></div>
+                        <div class="color-info"><strong>Azul Corporativo</strong><span>#2176D1</span></div>
+                        <span class="tag">BRAND</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-circle" style="background-color: #00233F;"></div>
+                        <div class="color-info"><strong>Azul Marino</strong><span>#00233F</span></div>
+                        <span class="tag tag-text">TEXT</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-circle" style="background-color: #FAFAFA; border: 1px solid #ddd;"></div>
+                        <div class="color-info"><strong>Blanco Alabastro</strong><span>#FAFAFA</span></div>
+                        <span class="tag">BRAND</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-circle" style="background-color: #02ADA2;"></div>
+                        <div class="color-info"><strong>Verde Persa</strong><span>#02ADA2</span></div>
+                        <span class="tag">BRAND</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-circle" style="background-color: #E22C2C;"></div>
+                        <div class="color-info"><strong>Rojo Bermellón</strong><span>#E22C2C</span></div>
+                        <span class="tag">BRAND</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-circle" style="background-color: #F56B0F;"></div>
+                        <div class="color-info"><strong>Naranja Calabaza</strong><span>#F56B0F</span></div>
+                        <span class="tag">BRAND</span>
+                    </div>
+                    <div class="color-row">
+                        <div class="color-circle" style="background-color: #656565;"></div>
+                        <div class="color-info"><strong>Gris Dim</strong><span>#656565</span></div>
+                        <span class="tag">BRAND</span>
+                    </div>
+                </div>
+
+                <div class="card-blanca typo-block">
+                    <span class="label-typo">TIPOGRAFÍA</span>
+                    <div class="typo-content">
+                        <h2 class="aa-display">Aa</h2>
+                        <p class="typo-main-name">Roboto Slab</p>
+                        <p class="t1">Título 1 - Roboto Slab / Bold 36 px</p>
+                        <p class="e1">Encabezado 1 - Roboto Slab / Medium 26 px</p>
+                        <p class="e2">Encabezado 2 - Roboto / Medium 31 px</p>
+                        <p class="p-med">Párrafos - Roboto / Medium 22 px</p>
+                        <p class="btn-txt">Botones - Roboto / Medium 20 px</p>
+                        <p class="subt">Subtítulo - Roboto / Bold 17 px</p>
+                        <p class="body-txt">Cuerpo de texto - Roboto / Regular 17 px</p>
+                        <p class="link">Hipervínculo - Roboto / Regular 17 px</p>
+                        <p class="link-bold">Hipervínculo 2 - Roboto / Bold 17 px</p>
+                        <p class="footer-txt">Footer - Roboto / Regular 14 px</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="responsive-section">
+        <div class="container">
+            <div class="responsive-text">
+                <h1>Diseño Responsive</h1>
+                <p>Adaptabilidad total. Una plataforma pensada para ser consultada en terreno desde una tablet o
+                    gestionada en oficina desde un escritorio. El objetivo central fue descongestionar la atención
+                    presencial de la municipalidad.</p>
+            </div>
+
+            <div class="mockup-container">
+                <div class="bg-circle-gradient"></div>
+                <img src="tramites/Mock up-tramites mobile.png" alt="Mockup Mobile and Desktop" class="mockup-img">
+            </div>
+        </div>
+    </section>
+    </div>
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-logo">
+                <span class="icon"></span> <strong>BELÉN BRIONES</strong>
+            </div>
+
+            <div class="footer-right">
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/belen-brionesibeas/" target="_blank" class="social-icon">In</a>
+
+                    <a href="https://wiki.ead.pucv.cl/Belen_Briones" target="_blank" class="social-icon">📂</a>
+
+                    <a href="#" class="social-icon">🌐</a>
+                </div>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>© 2026 Belén Briones. Todos los derechos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Privacidad</a>
+                <a href="#">Términos</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</div>
+</section>
+
+</main>
+
+</body>
+
+</html>

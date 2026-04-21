@@ -1,0 +1,550 @@
+/* ==============================
+   ESTILOS CORREGIDOS (CSS)
+   ============================== */
+
+/* Configuración General (Mantener si no lo tienes) */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #88BDCA;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Títulos H1 con línea blanca (Mantener) */
+h1 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 36px;
+    color: #0F172A;
+    position: relative;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 5%;
+    bottom: 5%;
+    width: 4px;
+    background-color: white;
+}
+
+/* ==============================
+   Sección Hero (Primera Imagen)
+   ============================== */
+.project-hero {
+    position: relative;
+    padding: 60px 0;
+}
+
+.blur-effect {
+    position: absolute;
+    top: 10%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: #2B6CEE;
+    filter: blur(120px);
+    opacity: 0.4;
+    z-index: -1;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.text-block {
+    flex: 1;
+}
+
+.text-block p {
+    font-size: 18px;
+    color: #0F172A;
+    line-height: 1.6;
+}
+
+.image-block {
+    flex: 1;
+}
+
+/* CORRECCIÓN 1: Redondeo en la primera imagen */
+.image-block img {
+    width: 100%;
+    border-radius: 20px;
+    /* Borde redondeado solicitado */
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
+}
+
+/* ==============================
+   Sección Interfaz y Galería
+   ============================= */
+.interface-section {
+    padding: 60px 0;
+}
+
+.text-block-full {
+    max-width: 800px;
+    margin-bottom: 40px;
+}
+
+/* Nuevo contenedor para alinear flechas correctamente */
+.gallery-wrapper {
+    display: flex;
+    align-items: center;
+    /* Centra verticalmente flechas y galería */
+    justify-content: center;
+    position: relative;
+    gap: 15px;
+    /* Espacio entre flecha y pista */
+}
+
+/* CORRECCIÓN 2: Imágenes más chicas y alineadas */
+.gallery-track-container {
+    overflow: hidden;
+    /* Oculta lo que sobresale */
+    width: 100%;
+    /* Ocupa el ancho disponible entre flechas */
+}
+
+.gallery-track {
+    display: flex;
+    overflow-x: auto;
+    /* Permite scroll horizontal */
+    gap: 15px;
+    padding: 10px 0;
+    scroll-behavior: smooth;
+}
+
+/* Ocultar barra de scroll para estética */
+.gallery-track::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-track {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.gallery-track img {
+    height: 300px;
+    /* CORRECCIÓN 3: Altura reducida (más chicas) */
+    width: auto;
+    /* Mantiene proporción */
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo Botones de Navegación */
+.nav-btn {
+    background: rgba(255, 255, 255, 0.9);
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 18px;
+    transition: background 0.3s;
+    z-index: 10;
+    /* Asegura que estén arriba */
+    flex-shrink: 0;
+    /* Evita que la flecha se encoja */
+}
+
+.nav-btn:hover {
+    background: white;
+}
+
+/* Contenedor del caption */
+.caption-container {
+    text-align: left;
+    margin-top: 25px;
+    padding-left: 60px;
+    /* Alineación aproximada con el track */
+}
+
+.caption {
+    background-color: #B2D3DB;
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    color: #0F172A;
+}
+
+/* Cursor de lupa para las imágenes */
+.zoomable {
+    cursor: zoom-in;
+    transition: transform 0.3s ease;
+}
+
+.zoomable:hover {
+    transform: scale(1.02);
+}
+
+/* Esto hace que el lightbox aparezca centrado y encima de todo */
+.lightbox {
+    display: none;
+    /* Se cambia a 'flex' vía JS */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox-content {
+    max-width: 90%;
+    max-height: 85%;
+    object-fit: contain;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Opcional: que el mouse cambie a una lupita al pasar sobre las fotos */
+.zoomable {
+    cursor: zoom-in;
+}
+
+/* Sección del Lenguave viusal*7
+ /* --- SECCIÓN LENGUAJE VISUAL --- */
+.lenguaje-visual {
+    background-color: #E9E9E9;
+    /* Fondo solicitado */
+    padding: 80px 0;
+}
+
+.header-visual {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.quote {
+    font-style: italic;
+    color: #656565;
+    font-size: 16px;
+}
+
+/* Grid para las tarjetas blancas */
+.grid-visual {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.card-blanca {
+    background: white;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos Paleta de Colores */
+.paleta-block h3 {
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #88BDCA;
+    margin-bottom: 25px;
+}
+
+.color-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.color-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    margin-right: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.color-info {
+    flex-grow: 1;
+}
+
+.color-info strong {
+    display: block;
+    font-size: 16px;
+    color: #0F172A;
+}
+
+.color-info span {
+    font-size: 14px;
+    color: #94A3B8;
+}
+
+.tag {
+    background: #DBEAFE;
+    color: #2176D1;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 4px 10px;
+    border-radius: 12px;
+}
+
+.tag-text {
+    background: #F1F5F9;
+    color: #64748B;
+}
+
+/* Estilos Tipografía */
+.typo-block {
+    font-family: 'Roboto', sans-serif;
+    color: #00233F;
+}
+
+.label-typo {
+    font-size: 12px;
+    letter-spacing: 2px;
+    color: #94A3B8;
+}
+
+.aa-display {
+    font-family: 'Roboto Slab', serif;
+    font-size: 64px;
+    margin: 10px 0 0 0;
+}
+
+.typo-main-name {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Clases específicas de la imagen de tipografía */
+.t1 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.e1 {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 500;
+    font-size: 26px;
+}
+
+.e2 {
+    font-weight: 500;
+    font-size: 31px;
+}
+
+.p-med {
+    font-weight: 500;
+    font-size: 22px;
+}
+
+.btn-txt {
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.subt {
+    font-weight: 700;
+    font-size: 17px;
+}
+
+.body-txt {
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.link {
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.link-bold {
+    font-weight: 700;
+    text-decoration: underline;
+    font-size: 17px;
+}
+
+.footer-txt {
+    font-size: 14px;
+    color: #64748B;
+}
+
+/* --- SECCIÓN RESPONSIVE --- */
+.responsive-section {
+    background-color: #88BDCA;
+    /* Fondo celeste */
+    padding: 100px 0;
+    text-align: center;
+}
+
+/* Ajuste específico para el título en la sección celeste */
+.responsive-text h1 {
+    display: inline-block;
+    /* Para que la línea se ajuste al ancho del texto */
+    position: relative;
+    padding-left: 20px;
+    /* Espacio para la línea */
+    text-align: left;
+    /* Alineamos a la izquierda para que la línea luzca como en la primera sección */
+    margin-bottom: 20px;
+}
+
+/* La línea blanca pegada al título */
+.responsive-text h1::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10%;
+    bottom: 10%;
+    width: 4px;
+    /* Grosor de la línea */
+    background-color: white;
+    border-radius: 2px;
+}
+
+.responsive-text {
+    max-width: 800px;
+    margin: 0 auto 60px auto;
+    text-align: center;
+    /* Mantiene el párrafo centrado */
+}
+
+.responsive-text p {
+    font-size: 18px;
+    color: #0F172A;
+}
+
+.mockup-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-circle-gradient {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: linear-gradient(180deg, #00233F 0%, #005CA5 100%);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.mockup-img {
+    position: relative;
+    z-index: 2;
+    max-width: 90%;
+    height: auto;
+}
+
+/* Ajuste de imágenes en cards */
+.card-blanca img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* --- FOOTER PERSONALIZADO --- */
+.main-footer {
+    background-color: #353535;
+    /* El gris oscuro que elegiste */
+    color: white;
+    padding: 60px 0 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Contenedor de los links sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+    /* Espacio entre los círculos */
+}
+
+/* Los círculos de los iconos */
+.social-icon {
+    text-decoration: none;
+    color: #D5639F;
+    /* <--- COLOR ROSADO para el icono/texto */
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D5639F;
+    /* <--- BORDE ROSADO */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    /* Tamaño del emoji o el "In" */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.social-icon:hover {
+    background-color: #D5639F;
+    /* Fondo se vuelve rosado */
+    color: white;
+    /* Icono se vuelve blanco */
+    transform: translateY(-3px);
+    /* Pequeño salto */
+    box-shadow: 0 4px 10px rgba(213, 99, 159, 0.3);
+    /* Sombra rosada suave */
+}
+
+/* Footer parte baja (Copyright) */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.footer-legal a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.footer-legal a:hover {
+    color: #D5639F;
+}

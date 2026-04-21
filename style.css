@@ -1,0 +1,1017 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: #fff;
+}
+
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* Espacio entre palabras */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    /* Quita el subrayado azul */
+    color: #333;
+    /* Color del texto */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+    /* Cambia a rosado al pasar el mouse */
+}
+
+/* El botón de contacto */
+.btn-contactar {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-contactar {
+    background-color: #D5639F;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.bg-img {
+    width: 100%;
+    opacity: 0.8;
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Esto centra todo el bloque (texto + imagen) */
+    gap: 50px;
+    /* Espacio entre el texto y el PC */
+    width: 100%;
+    z-index: 2;
+    text-align: left;
+    /* Mantiene el texto alineado a la izquierda internamente */
+}
+
+/* Para que el bloque de texto se vea más ordenado */
+.hero-text {
+    max-width: 500px;
+    /* Evita que el texto se estire demasiado */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
+    /* Si quieres que los botones se centren respecto al título, descomenta la línea de abajo: */
+    /* justify-content: center; */
+}
+
+.btn-primary {
+    background-color: #D5639F;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    display: inline-block;
+    text-decoration: none;
+    /* <--- ESTO QUITA LA LÍNEA DE ABAJO */
+    color: #000000;
+    /* <--- ESTO PONE EL TEXTO EN NEGRO */
+    background: white;
+    border: 1px solid #ddd;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Para que no cambie a azul ni subrayado cuando ya lo visitaste */
+.btn-secondary:visited {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Un efecto suave al pasar el mouse */
+.btn-secondary:hover {
+    background-color: #f5f5f5;
+    border-color: #D5639F;
+    /* El toque rosado que venimos usando */
+    color: #000000;
+}
+
+.pc-img {
+    max-width: 500px;
+}
+
+/* Sección Sobre Mí */
+.about {
+    padding: 80px 10% 2%;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+/* Manejo de Imágenes de Perfil y Flores */
+/* Contenedor principal de la imagen */
+.profile-visuals {
+    position: relative;
+    /* <--- IMPORTANTE para que las flores no se escapen */
+    width: 350px;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* El círculo de tu foto */
+.profile-circle {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 4px solid #D5639F;
+    /* Tu color rosado de acento */
+    z-index: 2;
+    /* Para que la foto esté sobre algunas flores */
+}
+
+.profile-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Flor de ARRIBA (flores.2.png) */
+.flower-top {
+    position: absolute;
+    top: 0;
+    right: -70px;
+    width: 200px;
+    /* Ajusta el tamaño aquí */
+    z-index: 3;
+    /* Pasa por ARRIBA del círculo */
+    transform: rotate(15deg);
+}
+
+/* Flor de ABAJO (flores.rosadas.png) */
+.flower-bottom {
+    position: absolute;
+    bottom: -10px;
+    left: -20px;
+    width: 200px;
+    /* Ajusta el tamaño aquí */
+    z-index: 2;
+    /* Pasa por DEBÁS del círculo */
+}
+
+/* Info Texto */
+.about-info h2 {
+    font-size: 2rem;
+}
+
+.about-info h2 span {
+    color: #D5639F;
+}
+
+.about-info h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.about-info p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.skills-grid {
+    display: flex;
+    gap: 15px;
+}
+
+.skill-card {
+    background: #f8f8f8;
+    padding: 15px 25px;
+    border-radius: 10px;
+    flex: 1;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* =========================================
+   ESTILOS NUEVOS: PROYECTOS, INFO, FOOTER
+   ========================================= */
+/* Utilidad: Contenedor alineado con el resto de la web */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- SECCIÓN PROYECTOS (Gris) --- */
+.projects {
+    background-color: #EEEEEE;
+    /* Fondo Gris solicitado */
+    padding: 80px 0;
+}
+
+/* --- AJUSTE DE ESPACIADO EN HEADER --- */
+
+/* 1. Aseguramos que el grupo de texto (h2 y p) se apile verticalmente */
+.titulo-grupo {
+    display: flex;
+    flex-direction: column;
+    /* Esto pone el subtítulo DEBAJO del título */
+    gap: 15px;
+    /* Esto crea el espacio exacto entre los dos */
+}
+
+.projects-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.projects-header h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin: 0;
+    /* Quitamos el margen por defecto */
+}
+
+.projects-header h2 span {
+    color: #D5639F;
+    /* Rosado solicitado */
+    margin-right: 20px;
+}
+
+.projects-header p {
+    color: #666;
+    max-width: 500px;
+    margin: 0;
+    /* Quitamos el margin-left para que alinee perfecto con el título */
+    font-size: 1rem;
+    line-height: 1.4;
+}
+
+/* 3. Mantenemos el header alineado con los botones a la derecha */
+.projects-header {
+    display: flex;
+    align-items: flex-end;
+    /* Alinea los botones con la base del texto */
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+/* Controles de Galería (Chebrones) */
+.gallery-controls {
+    display: flex;
+    gap: 10px;
+}
+
+.control-btn {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.control-btn:hover {
+    background-color: #D5639F;
+    color: white;
+    border-color: #D5639F;
+}
+
+/* Grilla de Proyectos */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* Una columna ancha, una estrecha */
+    gap: 30px;
+}
+
+/* Tarjetas Base */
+.project-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s;
+}
+
+/* =========================================
+   1. ESTILOS GENERALES Y CONTENEDOR CENTRADO
+   ========================================= */
+
+:root {
+    --accent-color: #D5639F;
+    /* El rosa de tu diseño */
+    --bg-gris: #EEEEEE;
+    /* Fondo gris para la sección */
+}
+
+/* Fondo para toda la sección */
+body,
+.proyectos-seccion,
+.servicios-seccion {
+    background-color: var(--bg-gris);
+}
+
+/* CONTENEDOR UNIFICADO: Alinea todo a 1200px máx */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    /* Margen de seguridad a los lados */
+    box-sizing: border-box;
+}
+
+/* =========================================
+   2. ESTILOS PARA EL CARRUSEL (SUPERIOR)
+   ========================================= */
+/* =========================================
+   CARRUSEL DE PROYECTOS: CORRECCIÓN TOTAL
+   ========================================= */
+:root {
+    --accent-color: #D5639F;
+    /* Variable para tu color rosado principal */
+}
+
+/* --- ENCABEZADO --- */
+.carrusel-header {
+    display: flex;
+    /* Alinea título y flechas en la misma fila */
+    justify-content: space-between;
+    /* Empuja el título a la izquierda y flechas a la derecha */
+    align-items: center;
+    /* Centra verticalmente ambos elementos */
+    max-width: 1200px;
+    /* Limita el ancho para que no se pegue a los bordes de la pantalla */
+    margin: 0 auto 40px;
+    /* Centra el bloque y le da 40px de espacio abajo */
+    padding: 90px 20px 0;
+    /* Espacio interno: 90px arriba, 20px a los lados */
+    box-sizing: border-box;
+    /* Asegura que el padding no afecte el ancho total */
+}
+
+.titulo-grupo h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.titulo-grupo h1 .acento {
+    color: var(--accent-color);
+    /* Aplica el color rosado a la línea vertical | */
+}
+
+/* --- NAVEGACIÓN --- */
+.controles-carrusel {
+    display: flex;
+    gap: 12px;
+    /* Espacio de 12px entre la flecha izquierda y derecha */
+}
+
+.control-btn {
+    background: white;
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    /* Hace que el botón sea un círculo perfecto */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    /* Sombra muy suave */
+    transition: all 0.3s ease;
+    /* Suaviza el cambio de color al pasar el mouse */
+}
+
+.control-btn:hover {
+    background-color: var(--accent-color);
+    /* Cambia a rosado al pasar el mouse */
+    color: white;
+    /* Cambia la flecha a blanco al pasar el mouse */
+}
+
+/* --- LÓGICA DEL MOVIMIENTO --- */
+.carrusel-wrapper {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+    /* ¡Importante! Oculta los slides que están "fuera" de la vista */
+}
+
+.carrusel-inner {
+    display: flex;
+    width: 200%;
+    /* El ancho es el doble porque hay 2 slides de 100% cada uno */
+    transition: transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Velocidad y suavidad del movimiento */
+}
+
+.carrusel-slide {
+    width: 50%;
+    /* Cada slide ocupa la mitad del carrusel-inner (es decir, el 100% de la vista) */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* Crea 3 columnas iguales para las cards */
+    gap: 25px;
+    /* Espacio entre cada tarjeta */
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+/* --- TARJETAS (CARDS) --- */
+.proyecto-card {
+    background: white;
+    border-radius: 25px;
+    /* Redondeo de esquinas como en tu Figma */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    text-decoration: none;
+    overflow: hidden;
+    /* Corta la imagen para que respete el redondeo de la card */
+    transition: transform 0.3s ease;
+    /* Efecto de subida al pasar el mouse */
+}
+
+.proyecto-card:hover {
+    transform: translateY(-8px);
+    /* Eleva la tarjeta 8px al hacer hover */
+}
+
+.imagen-contenedor {
+    height: 350px;
+    /* Altura fija para que todas las cards midan lo mismo */
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: 60%;
+    object-fit: cover;
+    /* Ajusta la imagen para que llene el espacio sin deformarse */
+}
+
+/* --- SERVICIOS ESTÁTICOS (ABAJO) --- */
+.servicios-estaticos {
+    max-width: 1200px;
+    margin: 50px auto 0;
+    /* Espacio de 50px respecto al carrusel */
+    padding: 0 20px;
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas que no se mueven */
+    gap: 25px;
+}
+
+/* --- 1. AJUSTAR ALTURA DE LA IMAGEN --- */
+.imagen-contenedor {
+    height: 250px;
+    /* Aquí controlas qué tan alta es la zona de la imagen */
+    background-color: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    /* Corta lo que sobre de la imagen */
+}
+
+.imagen-contenedor img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Cambia a 'contain' si no quieres que se corte nada */
+}
+
+/* --- 2. AJUSTAR EL TAG (Color Rosado D5639F) --- */
+.tag {
+    color: #D5639F;
+    /* Tu color rosado exacto */
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* --- 3. AJUSTAR TÍTULO (Inter Black 20px) --- */
+.card-info h3 {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    /* Asegúrate de tener Inter cargada */
+    font-weight: 900;
+    /* Esto es el 'Black' */
+    font-size: 20px;
+    /* Tamaño solicitado */
+    color: #0F172A;
+    /* Un azul muy oscuro casi negro */
+    line-height: 1.2;
+}
+
+/* --- 4. ESPACIADO DEL TEXTO --- */
+.card-info {
+    padding: 25px 20px;
+    /* Aumentamos el padding para que el texto no toque los bordes */
+    background: white;
+}
+
+.servicio-card {
+    background: white;
+    padding: 35px;
+    border-radius: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+
+.icono-bg {
+    color: var(--accent-color);
+    /* Color rosado para los iconos */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+/* =========================================
+   3. ESTILOS PARA LOS SERVICIOS (INFERIOR - ESTÁTICO)
+   ========================================= */
+
+/* Espaciado para la sección de servicios */
+.servicios-seccion {
+    padding: 40px 0 80px;
+    /* Separación de arriba y abajo */
+}
+
+/* Grilla estática: Fija en 3 columnas */
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columnas iguales */
+    gap: 30px;
+}
+
+/* Estilo de la tarjeta de servicio (No cliqueable, por eso no usamos enlace) */
+.servicio-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    text-align: left;
+}
+
+.servicio-icon {
+    font-size: 2.2rem;
+    color: var(--accent-color);
+    margin-bottom: 25px;
+    display: block;
+}
+
+.servicio-card h4 {
+    margin: 0 0 15px;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.servicio-card p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+/* El texto "Ver Detalles" es estático, no cliqueable */
+.servicio-card .ver-detalles {
+    color: #333;
+    font-weight: 300;
+    font-size: 0.9rem;
+    display: block;
+}
+
+/* --- Adaptabilidad (Móvil) --- */
+@media (max-width: 900px) {
+
+    .carrusel-slide:nth-child(1),
+    .carrusel-slide:nth-child(2),
+    .servicios-grid {
+        grid-template-columns: 1fr;
+        /* Una columna por fila */
+    }
+
+    .carrusel-slide .wide-card {
+        flex-direction: column;
+    }
+
+    .carrusel-slide .wide-card .img-editorial {
+        width: 100%;
+    }
+}
+
+/* =========================================
+   AJUSTE ESPECÍFICO DE IMÁGENES DE PROYECTO
+   ========================================= */
+/* 1. El contenedor de la imagen (el recuadro blanco superior) */
+.card-image {
+    width: 100%;
+    /* Mantenemos el alto que definimos antes para que el recuadro no cambie */
+    height: 300px;
+    /* Ajusta este valor si tus recuadros tienen otro alto */
+    background-color: #f0f0f0;
+    /* Un gris muy suave de fondo para el área vacía */
+    display: flex;
+    /* Usamos Flexbox para centrar la imagen achicada */
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+    overflow: hidden;
+    /* Por seguridad, que nada salga del recuadro */
+    /* Opcional: Si quieres un borde interno alrededor de la imagen achicada */
+    /* padding: 20px; */
+}
+
+/* 2. La imagen dentro del contenedor (mockup,libroweb.png y mockupde.ubicate.jpg) */
+.card-image img {
+    /* --- AQUÍ ESTÁ LA CLAVE PARA ACHICAR --- */
+    max-width: 80%;
+    /* La imagen ocupará como máximo el 80% del ancho del recuadro */
+    max-height: 80%;
+    /* La imagen ocupará como máximo el 80% del alto del recuadro */
+    width: auto;
+    /* Mantiene la proporción ancho/alto original */
+    height: auto;
+    /* Mantiene la proporción ancho/alto original */
+    object-fit: contain;
+    /* Importante: asegura que la imagen se contenga dentro del espacio sin recortarse */
+    display: block;
+    /* Quita espacios extraños inferiores */
+    /* Opcional: Si quieres que la imagen tenga esquinas redondeadas dentro del recuadro */
+    /* border-radius: 8px; */
+}
+
+.card-content {
+    padding: 20px;
+}
+
+.card-content .category {
+    color: #D5639F;
+    /* Rosado */
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-top: 5px;
+    color: #333;
+}
+
+/* Ajustes específicos de tamaño */
+.project-card.large .card-image {
+    height: 350px;
+    /* Ajustar según imagen */
+}
+
+.project-card.vertical .card-image {
+    height: 400px;
+    /* Ajustar según imagen */
+}
+
+/* Fila de Servicios Inferior */
+.services-row {
+    grid-column: 1 / -1;
+    /* Ocupa todo el ancho */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.service-icon {
+    font-size: 2rem;
+    color: #D5639F;
+    /* Rosado para iconos */
+    margin-bottom: 15px;
+}
+
+.service-card h4 {
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.service-card p {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.more-details {
+    color: #333;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* --- SECCIÓN INFO (Blanca) --- */
+.info-section {
+    background-color: white;
+    padding: 80px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    /* Más ancho a la izquierda */
+    gap: 60px;
+}
+
+.info-block {
+    margin-bottom: 50px;
+}
+
+.info-block h2 {
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 30px;
+}
+
+.info-block h2 span {
+    color: #D5639F;
+    margin-right: 10px;
+}
+
+/* Timeline (Experiencia/Educación) */
+.timeline-item {
+    display: flex;
+    gap: 20px;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: 7px;
+    top: 20px;
+    width: 2px;
+    height: 100%;
+    background-color: #eee;
+    z-index: 1;
+}
+
+.timeline-item:last-child::before {
+    display: none;
+    /* Quita la línea al último */
+}
+
+.timeline-dot {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border: 3px solid #D5639F;
+    /* Rosado */
+    border-radius: 50%;
+    margin-top: 5px;
+    z-index: 2;
+}
+
+.timeline-content h4 {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.timeline-content .date {
+    color: #D5639F;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.timeline-content p {
+    color: #666;
+    margin-top: 5px;
+    line-height: 1.6;
+}
+
+/* Tags (Aptitudes) */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.tag {
+    background-color: #f5f5f5;
+    color: #555;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    border: 1px solid #eee;
+}
+
+/* Contacto */
+.contact-list {
+    list-style: none;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.contact-icon {
+    color: #D5639F;
+    /* Rosado solicitado */
+    font-size: 1.2rem;
+}
+
+/* --- FOOTER (Oscuro) --- */
+/* --- FOOTER PERSONALIZADO --- */
+.main-footer {
+    background-color: #353535;
+    /* El gris oscuro que elegiste */
+    color: white;
+    padding: 60px 0 30px 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+/* Contenedor de los links sociales */
+.social-links {
+    display: flex;
+    gap: 15px;
+    /* Espacio entre los círculos */
+}
+
+/* Los círculos de los iconos */
+.social-icon {
+    text-decoration: none;
+    color: #D5639F;
+    /* <--- COLOR ROSADO para el icono/texto */
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D5639F;
+    /* <--- BORDE ROSADO */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    /* Tamaño del emoji o el "In" */
+    font-weight: bold;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+/* Efecto al pasar el mouse (Hover) */
+.social-icon:hover {
+    background-color: #D5639F;
+    /* Fondo se vuelve rosado */
+    color: white;
+    /* Icono se vuelve blanco */
+    transform: translateY(-3px);
+    /* Pequeño salto */
+    box-shadow: 0 4px 10px rgba(213, 99, 159, 0.3);
+    /* Sombra rosada suave */
+}
+
+/* Footer parte baja (Copyright) */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.footer-legal a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.footer-legal a:hover {
+    color: #D5639F;
+}

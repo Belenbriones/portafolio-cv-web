@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio | Belén Briones</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style5.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">
+            <span class="icon"></span>
+            <a href="index.html" style="text-decoration: none; color: inherit;">
+                <strong>BELÉN BRIONES</strong>
+            </a>
+        </div>
+        <nav class="nav-menu">
+            <a href="index.html#proyectos">Proyectos</a>
+
+            <a href="index.html#sobre-mi">Sobre Mí</a>
+
+            <a href="https://wa.me/56957190304?text=Hola%20Belén,%20vi%20tu%20portafolio%20y%20me%20gustaría%20contactarte"
+                target="_blank">
+                <button class="btn-contactar">Contactar</button>
+            </a>
+        </nav>
+    </header>
+    <main>
+    </main>
+    <section id="inicio" class="hero-section">
+        <div class="decorative-line line-1"></div>
+        <div class="decorative-line line-2"></div>
+
+        <div class="hero-content container">
+            <div class="hero-image">
+                <img src="grafíco/Serendipia_.png" alt="Ilustración de flores multicolor" class="main-project-img">
+            </div>
+
+            <div class="hero-text">
+                <h1>Diseño gráfico</h1>
+                <p>En el taller gráfico, se trabajaron ediciones versátiles que combinaron técnicas manuales y
+                    digitales. Se exploraron herramientas como Adobe InDesign e Illustrator, permitiendo la creación de
+                    piezas gráficas dinámicas y funcionales. Estas ediciones reflejan un enfoque integral en el diseño,
+                    uniendo creatividad y dominio técnico para lograr resultados visualmente atractivos y comunicativos.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="secondary-section">
+        <div class="container">
+            <div class="top-gallery">
+                <img src="Grafíco/flores(2).png" alt="Flores" class="gallery-img">
+                <img src="Grafíco/Zonal_lamina.png" alt="Botánica" class="gallery-img">
+                <a href="Grafíco/Propuesta_final_del_ciclo_2__Ocasion_editorial_pucv_y_pastoral_.svg" target="_blank">
+                    <img src="Grafíco/Miniatura_De_Tu_Pdf.png" alt="Ver PDF completo" class="gallery-img">
+                </a>
+                <img src="Grafíco/Dibujo.flores.png" alt="Botánica 2" class="gallery-img">
+            </div>
+
+            <div class="description-block">
+                <h1 class="white-line-title">Una edición versátil, “Levedad del rastro en la naturaleza”</h1>
+                <p class="description-text">
+                    Situado en el cruce geográfico de Ritoque, este trabajo editorial explora la riqueza matérica de su
+                    entorno. El objetivo es traducir las texturas del bosque nativo, la fluidez del agua y la densidad
+                    de la tierra mediante la versatilidad de la tinta china. A través de la experimentación formal, la
+                    edición se convierte en un registro de impresiones y contrastes, documentando cómo estos tres
+                    elementos dialogan y conviven en un espacio natural único de la Región de Valparaíso.
+                </p>
+            </div>
+        </div>
+
+        <div class="full-width-black-gallery">
+            <div class="black-gallery-inner">
+                <img src="Grafíco/Taller2.edición(2).jpg" alt="Proceso 2">
+                <img src="Grafíco/Taller2.edición(3).jpg" alt="Proceso 3">
+                <img src="Grafíco/taller2.jpg" alt="Proceso 4">
+                <img src="Grafíco/Taller2.edición.jpg" alt="Proceso 5">
+            </div>
+        </div>
+    </section>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="imgFull">
+    </div>
+    <script>
+        // Seleccionamos los elementos
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("imgFull");
+        const span = document.getElementsByClassName("close")[0];
+
+        // Buscamos todas las imágenes de la galería
+        document.querySelectorAll('.gallery-img').forEach(img => {
+            img.onclick = function () {
+                modal.style.display = "block";
+                modalImg.src = this.src; // Le pasa la ruta de la imagen clickeada
+            }
+        });
+
+        // Cerrar al hacer clic en la X
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+
+        // Cerrar al hacer clic fuera de la imagen
+        modal.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    <section class="seccion-editorial">
+        <div class="contenido-grid">
+            <div class="texto-editorial">
+                <h1>Editorial, selección de fragmento del libro “Amereida Volumen I”</h1>
+                <p>Esta edición representa un meticuloso proceso de selección, donde hemos extraído con cuidado
+                    fragmentos e interpretaciones del libro Amereida.</p>
+                <p>Seleccionamos versos y frases que encapsulan la esencia de Amereida, y las complementamos con
+                    ilustraciones realizadas con la técnica de monocopía.</p>
+
+                <img src="Grafíco/Portada.Amereida.png" alt="Detalle Monocopía" class="img-decorativa">
+            </div>
+
+            <div class="portada-container">
+                <iframe class="pdf-viewer-container"
+                    src="https://online.fliphtml5.com/gmyudd/ilovepdf_merged_organized/" seamless="seamless"
+                    scrolling="no" frameborder="0" allowtransparency="true" allowfullscreen="true">
+                </iframe>
+            </div>
+        </div>
+        <section class="dunas-full-width">
+            <div class="dunas-container-centered">
+                <div class="dunas-text-box">
+                    <h1 class="white-line-round">Campo Dunar Concón Región de Valparaíso</h1>
+                    <p class="desc-green">
+                        Esta edición nace del estudio de la flora y fauna de la Región de Valparaíso, centrando la
+                        mirada en un ecosistema único: el Santuario de la Naturaleza Campo Dunar de Concón. A través de
+                        estas páginas, exploramos la vida secreta de las abejas de nuestra región y sus complejas
+                        relaciones ecológicas. El lector podrá descubrir el ciclo vital de estos insectos en el entorno
+                        dunar: desde su incansable labor de polinización de la flora nativa hasta sus particulares
+                        procesos de nidificación en el suelo arenoso, revelando la importancia de conservar el
+                        equilibrio entre el insecto y su territorio.
+                    </p>
+                </div>
+                <div class="dunas-single-image">
+                    <img src="Grafíco/Portada.Duna.PNG" alt="Campo Dunar">
+                </div>
+            </div>
+        </section>
+
+        <section class="white-footer-gallery">
+            <div class="gallery-inner">
+                <img src="Grafíco/Edicion(1).PNG" alt="Duna 1" class="zoom-img">
+                <img src="Grafíco/Edición(2).PNG" alt="Duna 2" class="zoom-img">
+                <img src="Grafíco/Edición(3).PNG" alt="Duna 3" class="zoom-img">
+                <img src="Grafíco/Edición (4).PNG" alt="Duna 4" class="zoom-img">
+                <img src="Grafíco/ultimo.png" alt="Duna 5" class="zoom-img">
+            </div>
+        </section>
+        <section class="collage-section">
+            <div class="collage-container">
+                <div class="collage-item">
+                    <div class="image-wrapper"><img src="Grafíco/Pajarito(1).png" alt="Picaflor"></div>
+                    <p class="species-name">Picaflor Chico</p>
+                </div>
+                <div class="collage-item">
+                    <div class="image-wrapper"><img src="Grafíco/Ilustración_sin_título 3.png" alt="Bombus"></div>
+                    <p class="species-name">Bombus dahlbomii</p>
+                </div>
+                <div class="collage-item">
+                    <div class="image-wrapper"><img src="Grafíco/Ilustración_sin_título 4.png" alt="Solanum"></div>
+                    <p class="species-name">Solanum</p>
+                </div>
+                <div class="collage-item">
+                    <div class="image-wrapper"><img src="Grafíco/caupolican.gayi.png" alt="Abeja"></div>
+                    <p class="species-name">Caupolican Gayi</p>
+                </div>
+                <div class="collage-item">
+                    <div class="image-wrapper"><img src="Grafíco/Abeja callonychium.chilense.png" alt="Abeja"></div>
+                    <p class="species-name">Callonychium chilense</p>
+                </div>
+                <div class="collage-item">
+                    <div class="image-wrapper"><img src="Grafíco/flor.ortiga.png" alt="Ortiga"></div>
+                    <p class="species-name">Ortiga</p>
+                </div>
+            </div>
+        </section>
+
+    </section>
+    <footer class="main-footer">
+        <div class="footer-inner">
+            <div class="footer-content">
+                <div class="footer-logo"><strong>BELÉN BRIONES</strong></div>
+                <div class="social-links">
+                    <a href="#" class="social-icon">In</a>
+                    <a href="#" class="social-icon">📂</a>
+                    <a href="#" class="social-icon">🌐</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Belén Briones. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacidad</a>
+                    <a href="#">Términos</a>
+                </div>
+            </div>
+        </div>
+    </footer>

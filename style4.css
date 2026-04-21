@@ -1,0 +1,773 @@
+/* Header */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background: #fff;
+}
+
+.logo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    /* Espacio entre palabras */
+}
+
+.nav-menu a {
+    text-decoration: none;
+    /* Quita el subrayado azul */
+    color: #333;
+    /* Color del texto */
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: var(--accent-color);
+    /* Cambia a rosado al pasar el mouse */
+}
+
+/* El botón de contacto */
+.btn-contactar {
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+nav a {
+    text-decoration: none;
+    color: inherit;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.btn-contactar {
+    background-color: #383C47;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* La sección 1 */
+/* La sección 1 */
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: #4A4A4A;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 80px 20px;
+}
+
+p {
+    font-size: 12pt;
+    /* Cambia el tamaño a 18pt */
+    margin-bottom: 10px;
+    /* Esto separa un párrafo del siguiente verticalmente */
+    line-height: 1.2;
+    /* Mejora la legibilidad (espaciado entre líneas) */
+    color: inherit;
+    /* Mantiene el color según la sección (blanco o gris) */
+    max-width: 1200px;
+    /* Opcional: evita que las líneas sean demasiado largas */
+}
+
+/* GRID LAYOUT */
+.grid-content {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.grid-content.reversed {
+    flex-direction: row-reverse;
+}
+
+.image-wrapper,
+.text-block {
+    flex: 1;
+}
+
+/* ESTILOS DE TÍTULOS H1 */
+h1 {
+    font-size: 36px;
+    font-weight: 700;
+    /* Bold */
+    color: #1A1A1A;
+    margin: 0;
+}
+
+.title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+/* LÍNEAS LATERALES */
+.line-blue {
+    width: 4px;
+    height: 36px;
+    background-color: #2383BD;
+    display: inline-block;
+}
+
+.line-yellow {
+    width: 60px;
+    /* Estilo de subrayado corto o línea lateral */
+    height: 4px;
+    background-color: #FBBF24;
+    display: inline-block;
+    align-self: flex-end;
+    /* Ajuste para que parezca el de la imagen */
+    margin-bottom: 10px;
+}
+
+/* SECCIÓN BLANCA (SUPERIOR) */
+.section-white {
+    background-color: #ffffff;
+}
+
+.meta-data {
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #888;
+}
+
+.divider {
+    margin: 0 10px;
+    color: #ccc;
+}
+
+/* SECCIÓN CELESTE CON PATRÓN CSS */
+.section-blue {
+    /* Color base azul (2383BD) */
+    background-color: #2383BD;
+
+    /* El patrón exacto de franjas anchas de image_1.png en CSS */
+    background-image: repeating-linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 10%,
+            rgba(255, 255, 255, 0.08) 10%,
+            /* El color de la franja clara, muy sutil */
+            rgba(255, 255, 255, 0.08) 35%,
+            rgba(255, 255, 255, 0) 35%,
+            rgba(255, 255, 255, 0) 60%,
+            rgba(255, 255, 255, 0.08) 60%,
+            rgba(255, 255, 255, 0.08) 85%);
+
+    /* Para asegurar que el patrón cubra toda la sección */
+    background-size: 100% 300px;
+
+    color: white;
+    /* Asegurar que el texto sea legible */
+}
+
+.section-blue h1 {
+    color: white;
+}
+
+.section-blue p,
+.section-blue li {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* IMÁGENES */
+.main-img {
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+    display: block;
+}
+
+.secondary-img {
+    display: block;
+    max-width: 280px;
+    /* Definimos un ancho máximo mucho más pequeño (antes era 100%) */
+    width: 100%;
+    /* Para que sea responsiva dentro de ese máximo */
+    height: auto;
+    margin: 0 auto;
+    border-radius: 12px;
+}
+
+ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+li {
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 20px;
+}
+
+li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #FBBF24;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+
+    .grid-content,
+    .grid-content.reversed {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title-wrapper {
+        justify-content: center;
+    }
+}
+
+/* tercera sección */
+/* tercera sección*/
+/* SECCIÓN BLANCA - FINAL Y PULIDA */
+
+.section-user-insight {
+    /* Estas líneas aseguran que el fondo blanco sea de extremo a extremo */
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+
+    background-color: #ffffff !important;
+    padding: 100px 0;
+    margin-top: 100px;
+    /* Espacio con la sección azul */
+    display: block;
+}
+
+.section-user-insight .user-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+    max-width: 1100px;
+    /* El contenido se mantiene centrado y ordenado */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* FRASES EN ITALIC */
+.section-user-insight .quote {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #1a1a1a !important;
+    margin-bottom: 20px;
+    font-style: italic;
+    /* <--- AQUÍ EL TEXTO EN CURSIVA */
+    font-weight: 400;
+}
+
+/* TARJETA GRIS (INSIGHT) */
+.section-user-insight .insight-card {
+    background-color: #F3F4F6;
+    border-radius: 12px;
+    padding: 40px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 280px;
+}
+
+/* Asegurar que los slides se vean de a uno */
+.section-user-insight .slide {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+}
+
+.section-user-insight .slide.active {
+    display: flex;
+}
+
+/* Títulos y Otros estilos (Manteniendo consistencia) */
+.section-user-insight .title-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.section-user-insight h1 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #1a1a1a !important;
+    margin: 0;
+}
+
+.section-user-insight .line-yellow-v {
+    width: 5px;
+    height: 36px;
+    background-color: #FBBF24;
+}
+
+.section-user-insight .description-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333333 !important;
+}
+
+.section-user-insight .author {
+    font-size: 14px;
+    font-weight: 700;
+    color: #6B7280 !important;
+    text-align: right;
+    display: block;
+    font-style: normal;
+    /* El nombre del autor NO va en cursiva */
+}
+
+/* Flechas de navegación */
+.section-user-insight .avatar-insight {
+    width: 60px;
+    /* Ancho fijo pequeño */
+    height: 60px;
+    /* Alto fijo para que sea un círculo perfecto */
+    border-radius: 50%;
+    /* Lo hace circular */
+    object-fit: cover;
+    /* Evita que la imagen se estire o se vea flaca */
+    margin-bottom: 15px;
+    /* Espacio con el texto de abajo */
+    display: block;
+    /* Asegura que se comporte como un bloque */
+    background-color: #eee;
+    /* Un gris suave por si la imagen demora en cargar */
+}
+
+/* 1. Aseguramos que la tarjeta sea el marco de referencia */
+.section-user-insight .insight-card {
+    background-color: #F3F4F6;
+    border-radius: 12px;
+    padding: 40px 60px;
+    /* Aumentamos el padding lateral para que el texto no toque las flechas */
+    position: relative;
+    /* ESTO ES CLAVE para que las flechas se peguen aquí */
+    display: flex;
+    align-items: center;
+    min-height: 280px;
+    overflow: visible;
+    /* Cambiado de hidden a visible para que las flechas respiren */
+}
+
+/* 2. Estilo de las flechas corregido */
+.section-user-insight .arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #D1D5DB;
+    /* Gris visible */
+    border: none;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 100;
+    /* Las ponemos por encima de todo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #1a1a1a;
+    transition: background-color 0.2s;
+}
+
+/* 3. Posición exacta dentro de la tarjeta gris */
+.section-user-insight .arrow.prev {
+    left: 15px;
+    /* Se pega al borde izquierdo interno de la card */
+}
+
+.section-user-insight .arrow.next {
+    right: 15px;
+    /* Se pega al borde derecho interno de la card */
+}
+
+.section-user-insight .arrow:hover {
+    background-color: #9CA3AF;
+}
+
+/* 3. Galeria */
+/* 3. galeria */
+/* --- SECCIÓN 4: GALERÍA GRIS --- */
+/* Esto obliga a que las 3 tarjetas se pongan en fila */
+/* CONTENEDOR GRIS */
+
+.grey-box {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    /* Oculta las fotos que no están al centro */
+}
+
+/* Contenedor principal de la galería */
+.photo-slider {
+    position: relative;
+    max-width: 900px; /* Ajusta según prefieras */
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra suave para que flote */
+}
+
+/* El track que se mueve */
+.slider-track {
+    display: flex;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Transición elegante */
+}
+
+.slide-photo {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.slide-photo img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* Botones modernos y minimalistas */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px); /* Efecto de vidrio */
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 24px;
+    color: #333;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-btn:hover {
+    background: #fff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    color: #E67E22; /* Color de acento */
+}
+
+.slider-btn.prev { left: 15px; }
+.slider-btn.next { right: 15px; }
+
+/* --- SECCIÓN 5: ARQUITECTURA (AZUL) --- */
+.section-architecture-blue {
+    /* Reutilizamos tu color azul y el patrón */
+    background-color: #2383BD;
+    background-image: repeating-linear-gradient(135deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0) 10%,
+            rgba(255, 255, 255, 0.08) 10%,
+            rgba(255, 255, 255, 0.08) 35%);
+    background-size: 100% 300px;
+    padding: 80px 0;
+    text-align: center;
+    /* Centra el título y la imagen */
+    color: white;
+}
+
+.arch-header h1 {
+    color: white !important;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.underline-yellow {
+    display: block;
+    width: 250px;
+    /* Largo de la línea bajo el título */
+    height: 4px;
+    background-color: #FBBF24;
+    margin: 0 auto 50px auto;
+    /* Centra la línea */
+}
+
+.arch-image-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    /* BORDE DE 12px solicitado */
+    border: 12px solid #ffffff;
+    border-radius: 12px;
+    /* Radio del borde */
+    overflow: hidden;
+    background-color: white;
+    /* Fondo blanco por si la imagen es transparente */
+}
+
+.diagram-img {
+    width: 100%;
+    display: block;
+    height: auto;
+}
+
+/* Ultima sección */
+/* Ultima sección interfaz*/
+/* Sección Principal */
+.interfaz-section {
+    position: relative;
+    width: 100%;
+    min-height: 80vh;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    /* Evita que el círculo se salga de la sección */
+    padding-top: 50px;
+}
+
+.label {
+    color: #888;
+    /* Color gris suave para la categoría */
+    font-family: 'Inter', sans-serif;
+    font-size: 0.9rem;
+}
+
+.titulo-interfaz {
+    font-size: 3rem;
+    font-weight: 800;
+    margin: 0;
+    position: relative;
+    display: inline-block;
+    /* Añadimos un padding a la izquierda para que la línea no toque las letras */
+    padding-left: 20px;
+}
+
+/* Línea decorativa VERTICAL al lado del título */
+.titulo-interfaz::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    /* Pegada al borde izquierdo del padding */
+    top: 10%;
+    /* Centrada verticalmente respecto al texto */
+    width: 6px;
+    /* Grosor de la línea */
+    height: 80%;
+    /* Largo de la línea */
+    background-color: #FFD600;
+    border-radius: 4px;
+    /* Opcional: puntas redondeadas */
+    z-index: 1;
+    /* Asegúrate de que esté por encima */
+}
+
+/* Características del contenedor visual (Círculo y Celular) */
+.visual-container {
+    position: relative;
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* El celular se apoya en la base */
+}
+
+/* Características del semicírculo azul */
+.circle-background {
+    position: absolute;
+    bottom: -150px;
+    /* Ajusta qué tan "hundido" está el círculo */
+    width: 800px;
+    height: 800px;
+    background-color: #2383BD;
+    /* Color solicitado */
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* Descripción: Ajuste del contenedor del celular para que sea vertical */
+.phone-mockup {
+    position: relative;
+    z-index: 2;
+    width: 300px;
+    /* Características: Ancho optimizado para móviles en desktop */
+    height: 620px;
+    /* Características: Alto proporcional al diseño de iPhone */
+    background: #000;
+    border-radius: 45px;
+    border: 10px solid #0e0e0e;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    margin-bottom: 40px;
+    overflow: hidden;
+}
+
+/* Características: Contenedor de la pantalla interna */
+.screen {
+    width: 100%;
+    height: 100%;
+    background-color: #fff;
+    border-radius: 35px;
+    overflow: hidden;
+    /* Descripción: Corta los bordes del iframe para que no se salgan del mockup */
+}
+
+/* Descripción: Comportamiento del iframe de Figma dentro del móvil */
+.screen iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    /* Características: El diseño de Figma se ajustará automáticamente al ancho del iframe */
+}
+
+/* Descripción: Estilo del círculo azul de fondo (usando tu color #2383BD) */
+.circle-background {
+    position: absolute;
+    bottom: -100px;
+    width: 700px;
+    height: 700px;
+    background-color: #2383BD;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+/* --- FOOTER FINAL CORREGIDO --- */
+.main-footer {
+    background-color: #353535;
+    color: white;
+    padding: 60px 0 30px 0;
+    width: 100%;
+    /* Asegura que el fondo ocupe todo el ancho */
+}
+
+/* ESTA ES LA CLAVE: Limita el contenido sin romper lo de arriba */
+.footer-inner {
+    max-width: 1200px;
+    /* Ajusta este ancho a tu gusto */
+    margin: 0 auto;
+    /* Centra el contenido */
+    padding: 0 40px;
+    /* Espacio a los lados para que no toque los bordes */
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    text-decoration: none;
+    color: #D5639F;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #D5639F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.social-icon:hover {
+    background-color: #D5639F;
+    color: white;
+    transform: translateY(-3px);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #aaa;
+}
+
+.footer-legal a {
+    color: #aaa;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.footer-legal a:hover {
+    color: #D5639F;
+}
