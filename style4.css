@@ -16,13 +16,14 @@ body {
     color: #333;
 }
 
-/* Header */
+/* Header — igual que index.html + línea inferior sutil exclusiva de index4 */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px 80px;
     background: #fff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .logo {
@@ -51,35 +52,7 @@ header {
     /* Cambia a rosado al pasar el mouse */
 }
 
-/* El botón de contacto */
-.btn-contactar {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-nav a {
-    text-decoration: none;
-    color: inherit;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    font-weight: 500;
-}
-
+/* Color distintivo del botón Contactar para index4 */
 .btn-contactar {
     background-color: #383C47;
     color: white;
@@ -87,6 +60,7 @@ nav a {
     padding: 10px 25px;
     border-radius: 20px;
     cursor: pointer;
+    font-weight: 700;
 }
 
 /* La sección 1 */

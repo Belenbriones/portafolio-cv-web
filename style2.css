@@ -3,6 +3,10 @@
    ============================== */
 
 /* Configuración General (Mantener si no lo tienes) */
+html {
+    overflow-x: hidden;
+}
+
 body {
     margin: 0;
     font-family: 'Inter', sans-serif;
@@ -44,6 +48,7 @@ h1::before {
 .project-hero {
     position: relative;
     padding: 60px 0;
+    overflow: hidden;
 }
 
 .blur-effect {
@@ -468,6 +473,13 @@ h1::before {
     width: 100%;
     height: auto;
     border-radius: 12px;
+}
+
+/* El .container general tiene padding: 40px 20px para las secciones del proyecto,
+   pero el footer necesita solo padding horizontal (igual que en index.html) */
+.main-footer .container {
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 /* --- FOOTER PERSONALIZADO --- */

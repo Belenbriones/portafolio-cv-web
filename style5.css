@@ -9,14 +9,13 @@ body {
     position: relative;
 }
 
-/* HEADER (Manteniendo tu estructura) */
+/* HEADER */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px;
+    padding: 20px 80px;
     background-color: #fff;
-    /* Fondo blanco para el header */
 }
 
 .nav-menu a {

@@ -9,11 +9,14 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
     background-color: #fff;
     color: #333;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 /* Header */
@@ -51,35 +54,7 @@ header {
     /* Cambia a rosado al pasar el mouse */
 }
 
-/* El botón de contacto */
-.btn-contactar {
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 25px;
-    cursor: pointer;
-    font-weight: 700;
-}
-
-nav a {
-    text-decoration: none;
-    color: inherit;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-}
-
-nav a {
-    text-decoration: none;
-    color: #333;
-    font-size: 14px;
-    font-weight: 500;
-}
-
+/* Color distintivo del botón Contactar para index3 */
 .btn-contactar {
     background-color: #383C47;
     color: white;
@@ -87,15 +62,11 @@ nav a {
     padding: 10px 25px;
     border-radius: 20px;
     cursor: pointer;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
 }
 
-/* CoNFIGURACIÓN GENREAL PARTE SECCIÓN 1 */
 /* Configuraciones Generales */
-body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    /* Cambia por tu fuente de preferencia */
-}
 
 .container {
     max-width: 1200px;
