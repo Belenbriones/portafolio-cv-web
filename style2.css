@@ -557,6 +557,110 @@ h1::before {
     margin-left: 20px;
 }
 
+/* =========================================
+   RESPONSIVE — TABLET (max 1024px)
+   ========================================= */
+@media (max-width: 1024px) {
+    .hero-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .grid-visual {
+        grid-template-columns: 1fr;
+    }
+
+    .mockup-img {
+        max-width: 80%;
+    }
+}
+
+/* =========================================
+   RESPONSIVE — MÓVIL (max 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Header (heredado de style.css, refuerzo) */
+    header {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-menu {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero */
+    .hero-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .text-block h1 {
+        font-size: 1.8rem;
+    }
+
+    .image-block img {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Galería */
+    .gallery-wrapper {
+        gap: 8px;
+    }
+
+    .gallery-track img {
+        height: 200px;
+    }
+
+    /* Lenguaje visual */
+    .header-visual {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    .grid-visual {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Responsive section */
+    .responsive-text {
+        padding: 0 20px;
+    }
+
+    .bg-circle-gradient {
+        width: 300px;
+        height: 300px;
+    }
+
+    .mockup-img {
+        max-width: 95%;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-legal a {
+        margin-left: 0;
+    }
+}
+
 .footer-legal a:hover {
     color: #D5639F;
 }

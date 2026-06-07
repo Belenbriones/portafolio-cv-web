@@ -242,16 +242,17 @@ header {
 /* RESPONSIVE (Para celulares) */
 @media (max-width: 768px) {
     header {
-        flex-direction: column;
-        gap: 15px;
-        padding: 20px;
+        padding: 16px 20px;
+        gap: 10px;
+        flex-wrap: wrap;
     }
 
     .nav-menu {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        gap: 12px;
     }
 
     .nav-menu a {
@@ -626,4 +627,58 @@ header {
 
 .footer-legal a:hover {
     color: #D5639F;
+}
+
+/* =========================================
+   RESPONSIVE — TABLET (max 1024px)
+   ========================================= */
+@media (max-width: 1024px) {
+    .hero-grid {
+        gap: 30px;
+    }
+
+    .system-palette {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================================
+   RESPONSIVE — MÓVIL (max 768px) — AMPLIADO
+   ========================================= */
+@media (max-width: 768px) {
+    /* Header (ya cubierto en media queries anteriores de este archivo) */
+    header {
+        padding: 16px 20px;
+    }
+
+    /* Sistema de colores / paleta */
+    .system-palette {
+        grid-template-columns: 1fr;
+    }
+
+    /* Galería */
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-legal a {
+        margin-left: 0;
+    }
 }

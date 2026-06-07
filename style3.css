@@ -656,3 +656,122 @@ iframe {
 .footer-legal a:hover {
     color: #D5639F;
 }
+
+/* =========================================
+   RESPONSIVE — TABLET (max 1024px)
+   ========================================= */
+@media (max-width: 1024px) {
+    .hero-content {
+        gap: 30px;
+    }
+
+    .feature-content {
+        gap: 30px;
+    }
+
+    .feature-text {
+        min-width: unset;
+    }
+
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .atoms-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =========================================
+   RESPONSIVE — MÓVIL (max 768px)
+   ========================================= */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        padding: 16px 20px;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .nav-menu {
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* Hero */
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .title-container {
+        justify-content: center;
+    }
+
+    .tags {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    /* Feature section */
+    .feature-content,
+    .feature-content.reversed {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .feature-text {
+        min-width: unset;
+        align-items: center;
+    }
+
+    .feature-mobile-group {
+        padding-top: 0;
+    }
+
+    .img-mobile {
+        width: 25vw;
+        min-width: 80px;
+    }
+
+    /* Servicios grid */
+    .servicios-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Sistema de diseño */
+    .atoms-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .colors-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .icons-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Prototype */
+    .prototype-content {
+        flex-direction: column;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .footer-legal a {
+        margin-left: 0;
+    }
+}
